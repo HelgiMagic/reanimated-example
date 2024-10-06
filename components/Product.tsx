@@ -4,6 +4,7 @@ import { Link } from 'expo-router';
 import { useCallback, useState, memo } from 'react';
 import { ViewStyle } from 'react-native';
 import { Href } from 'expo-router';
+import ProductReviews from './ProductReviews';
 
 type Props = {
   images: string[];
@@ -21,22 +22,17 @@ const Product = ({ images, style, href, carouselWidth }: Props) => {
 
   return (
     <View style={[styles.productWrapper, style]}>
-      <ProductCarousel
-        images={images}
-        width={carouselWidth}
-      ></ProductCarousel>
+      <ProductCarousel images={images} width={carouselWidth}></ProductCarousel>
       <Link href={href} style={styles.name}>
         Product name
       </Link>
 
       <View style={styles.prices}>
-        <Text style={styles.price}>
-          3 999 $
-        </Text>
-        <Text style={styles.oldPrice}>
-          4 999 $
-        </Text>
+        <Text style={styles.price}>3 999 $</Text>
+        <Text style={styles.oldPrice}>4 999 $</Text>
       </View>
+
+      <ProductReviews score={4.8} count={46}></ProductReviews>
 
       <Pressable
         style={[styles.button, buttonActive && styles.activeButton]}

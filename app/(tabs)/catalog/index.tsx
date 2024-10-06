@@ -5,7 +5,7 @@ export default function CatalogScreen() {
   return (
     <View>
       <Text>Catalog</Text>
-      <Link href='(tabs)/catalogDeep'>tap here</Link>
+      <Link href='/(tabs)/catalog/catalogDeep'>tap here</Link>
     </View>
   );
 }
