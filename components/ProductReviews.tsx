@@ -71,7 +71,7 @@ export default function ProductReviews({
         ))}
       </View>
       <Text style={textStyle}>
-        {!vertical && ' -'} {count} отзывов
+        {!vertical && ' -'} {count} reviews
       </Text>
     </View>
   );
