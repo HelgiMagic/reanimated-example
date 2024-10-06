@@ -22,10 +22,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name='home'
         options={{
-          title: 'Главная',
+          title: 'Home',
           tabBarLabel: ({ focused }) => (
             <Text style={focused ? styles.textFocused : styles.textDefault}>
-              Главная
+              Home
             </Text>
           ),
         }}
